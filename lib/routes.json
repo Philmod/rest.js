@@ -9019,6 +9019,128 @@
       },
       "description": "Get the number of commits per hour in each day."
     },
+    "createCheckRun": {
+      "url": "/repos/:owner/:repo/check-runs",
+      "method": "POST",
+      "headers": {
+        "accept": "application/vnd.github.antiope-preview+json"
+      },
+      "params": {
+        "owner": {
+          "type": "string",
+          "required": true
+        },
+        "repo": {
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "branch": {
+          "type": "string",
+          "required": true
+        },
+        "sha": {
+          "type": "string",
+          "required": true
+        },
+        "details_url": {
+          "type": "string"
+        },
+        "external_id": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "in_progress",
+            "completed"
+          ]
+        },
+        "started_at": {
+          "type": "string"
+        },
+        "conclusion": {
+          "type": "string",
+          "enum": [
+            "success",
+            "failure",
+            "neutral",
+            "cancelled",
+            "timed_out",
+            "action_required"
+          ]
+        },
+        "completed_at": {
+          "type": "string"
+        },
+        "creator": {
+          "type": "string"
+        },
+        "output": {
+          "type": "json"
+        }
+      },
+      "description": "Create a check run."
+    },
+    "updateCheckRun": {
+      "url": "/repos/:owner/:repo/check-runs/:id",
+      "method": "POST",
+      "headers": {
+        "accept": "application/vnd.github.antiope-preview+json"
+      },
+      "params": {
+        "owner": {
+          "type": "string",
+          "required": true
+        },
+        "repo": {
+          "type": "string",
+          "required": true
+        },
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "details_url": {
+          "type": "string"
+        },
+        "external_id": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "in_progress",
+            "completed"
+          ]
+        },
+        "conclusion": {
+          "type": "string",
+          "enum": [
+            "success",
+            "failure",
+            "neutral",
+            "cancelled",
+            "timed_out",
+            "action_required"
+          ]
+        },
+        "completed_at": {
+          "type": "string"
+        },
+        "output": {
+          "type": "json"
+        }
+      },
+      "description": "Update a check run."
+    },
     "createStatus": {
       "url": "/repos/:owner/:repo/statuses/:sha",
       "method": "POST",
