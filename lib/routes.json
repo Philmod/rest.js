@@ -9087,7 +9087,7 @@
     },
     "updateCheckRun": {
       "url": "/repos/:owner/:repo/check-runs/:id",
-      "method": "POST",
+      "method": "PATCH",
       "headers": {
         "accept": "application/vnd.github.antiope-preview+json"
       },
